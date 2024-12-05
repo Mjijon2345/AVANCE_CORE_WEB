@@ -1,0 +1,184 @@
+<h1>Ingresar nuevo huesped:</h1>
+<form (ngSubmit)="onSumbmit()" #viuForm="ngForm">  
+    
+    
+    
+    <label for="person_document">person_document:</label><br>
+    <input type="text" id="person_document" name="person_document"
+        placeholder="person_document"
+        #nombre="ngModel" [(ngModel)]="solicitud.person_document"
+        required><br> <br>
+    <br>
+
+    <label for="person_first_name">person_first_name:</label><br>
+    <input type="text" id="person_first_name" name="person_first_name"
+        placeholder="person_first_name"
+        #nombre="ngModel" [(ngModel)]="solicitud.person_first_name"
+        required><br> <br>
+    <br>
+
+    <label for="person_middle_name">person_middle_name:</label><br>
+    <input type="text" id="person_middle_name" name="person_middle_name"
+        placeholder="person_middle_name"
+        #nombre="ngModel" [(ngModel)]="solicitud.person_middle_name"
+        required><br> <br>
+    <br>
+
+    <label for="person_last_name">person_last_name:</label><br>
+    <input type="text" id="person_last_name" name="person_last_name"
+        placeholder="person_last_name"
+        #nombre="ngModel" [(ngModel)]="solicitud.person_last_name"
+        required><br> <br>
+    <br>
+
+    <label for="person_second_surname">person_second_surname:</label><br>
+    <input type="text" id="person_second_surname" name="person_second_surname"
+        placeholder="person_second_surname"
+        #nombre="ngModel" [(ngModel)]="solicitud.person_second_surname"
+        required><br> <br>
+    <br>
+
+    <label for="person_direction">person_direction:</label><br>
+    <input type="text" id="person_direction" name="person_direction"
+        placeholder="person_direction"
+        #nombre="ngModel" [(ngModel)]="solicitud.person_direction"
+        required><br> <br>
+    <br>
+
+    <label for="person_phone">person_phone:</label><br>
+    <input type="text" id="person_phone" name="person_phone"
+        placeholder="person_phone"
+        #nombre="ngModel" [(ngModel)]="solicitud.person_phone"
+        required><br> <br>
+    <br>
+
+    <label for="person_mobile">person_mobile:</label><br>
+    <input type="text" id="person_mobile" name="person_mobile"
+        placeholder="person_mobile"
+        #nombre="ngModel" [(ngModel)]="solicitud.person_mobile"
+        required><br> <br>
+    <br>
+
+
+
+    <label>
+        <input type="radio"
+            [checked]="estado"
+            (click)="seleccionarOpcion()"> Activa
+    </label>
+
+    <br>
+    <br>
+    
+    <label for="person_notes">person_notes:</label><br>
+    <input type="text" id="person_notes" name="person_notes"
+        placeholder="person_notes"
+        #nombre="ngModel" [(ngModel)]="solicitud.person_notes"
+        required><br> <br>
+    <br>
+
+
+        <label for="guest_history">guest_history:</label><br>
+    <input type="text" id="guest_history" name="guest_history"
+        placeholder="guest_history"
+        #nombre="ngModel" [(ngModel)]="solicitud.guest_history"
+        required><br> <br>
+    <br>
+
+
+
+    <label for="guest_date">guest_date:</label><br>
+    <input type="text" id="guest_date" name="guest_date"
+        placeholder="guest_date"
+        #nombre="ngModel" [(ngModel)]="solicitud.guest_date"
+        required><br> <br>
+    <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <label for="level">level:</label><br>
+<input type="number" id="level" name="level"
+    placeholder="level"
+    #nombre="ngModel" [(ngModel)]="level"
+    required><br> <br>
+<br>
+
+
+
+
+
+<!-- Combobox para Enfermedades -->
+<label for="enfermedades">Seleccione una enfermedad:</label>
+<select id="enfermedades" name="enfermedades" [(ngModel)]="selectedEnfermedad" (change)="guardarRelacionEnfermedades($event)">
+  <option value="" disabled selected>Seleccione una opción</option>
+  <option *ngFor="let record of recordsd" [value]="record.disease_id">
+    {{ record.disease_name }}
+  </option>
+</select>
+
+<!-- Mostrar las relaciones huésped-enfermedades -->
+<h3>Relaciones huésped-enfermedades:</h3>
+<ul>
+  <li *ngFor="let relacion of relacionHuespedEnfermedades">
+    {{ relacion.disease_name }}
+    <button (click)="eliminarRelacionEnfermedad(relacion)">Eliminar</button>
+  </li>
+</ul>
+<br>
+<br>
+
+<!-- Combobox para Actividades -->
+<label for="actividades">Seleccione una actividad:</label>
+<select id="actividades" name="actividades" [(ngModel)]="selectedActividad" (change)="guardarRelacionActividades($event)">
+  <option value="" disabled selected>Seleccione una opción</option>
+  <option *ngFor="let record of recordsa" [value]="record.activity_id">
+    {{ record.activity_description }}
+  </option>
+</select>
+
+<!-- Mostrar relaciones huésped-actividades -->
+<h3>Relaciones huésped-actividades:</h3>
+<ul>
+  <li *ngFor="let relacion of relacionHuespedActividades">
+    {{ relacion.activity_description }}
+    <button (click)="eliminarRelacionActividad(relacion)">Eliminar</button>
+  </li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+    <br>
+    <input type="submit" value="Envía"
+        >
+        <button (click)="navegarAPagina()">Cancelar</button>
+
+</form>
+
+
+
+

@@ -1,0 +1,35 @@
+<h1>Ingresar nueva enfermedad:</h1>
+<form (ngSubmit)="onSumbmit()" #viuForm="ngForm">  
+    
+    
+  
+    
+
+    <label for="activity_id">activity_id:</label><br>
+    <input type="number" id="activity_id" name="activity_id"
+        placeholder="activity_id"
+        #nombre="ngModel" [(ngModel)]="solicitud.activity_id"
+        required><br> <br>
+
+    <br>
+
+    <label for="disease_name">disease_name:</label><br>
+    <input type="text" id="disease_name" name="disease_name"
+        placeholder="disease_name"
+        #nombre="ngModel" [(ngModel)]="solicitud.disease_name"
+        required><br> <br>
+    <br>
+
+
+
+
+
+    <input type="submit" value="Envía"
+        >
+        <button (click)="navegarAPagina()">Cancelar</button>
+
+</form>
+
+
+
+

@@ -1,0 +1,45 @@
+<h1>Ingresar nueva visita:</h1>
+<form (ngSubmit)="onSumbmit()" #viuForm="ngForm">  
+    
+    
+    
+    <label for="activity_id">activity_id:</label><br>
+    <input type="number" id="activity_id" name="activity_id"
+        placeholder="activity_id"
+        #nombre="ngModel" [(ngModel)]="solicitud.activity_id"
+        required><br> <br>
+    <br>
+
+    <label for="activity_description">activity_description:</label><br>
+    <input type="text" id="activity_description" name="activity_description"
+        placeholder="activity_description"
+        #nombre="ngModel" [(ngModel)]="solicitud.activity_description"
+        required><br> <br>
+    <br>
+
+    <label for="activity_duration">activity_duration:</label><br>
+    <input type="number" id="activity_duration" name="activity_duration"
+        placeholder="activity_duration"
+        #nombre="ngModel" [(ngModel)]="solicitud.activity_duration"
+        required><br> <br>
+    <br>
+
+    <label for="activity_notes">activity_notes:</label><br>
+    <input type="text" id="activity_notes" name="activity_notes"
+        placeholder="activity_notes"
+        #nombre="ngModel" [(ngModel)]="solicitud.activity_notes"
+        required><br> <br>
+    <br>
+
+    
+    
+
+    <input type="submit" value="Envía"
+        >
+        <button (click)="navegarAPagina()">Cancelar</button>
+
+</form>
+
+
+
+

@@ -1,0 +1,109 @@
+
+
+<h1 class="titulo">Visitas</h1>
+<div class="line">
+  <button (click)="navegarAPagina()">Agregar nuevo</button>
+
+  <section class="inline-section">
+    <form action method>
+      <input type="text" id="numero" name="numero"
+        #correo="ngModel" [(ngModel)]="numeroIngresado">
+      <button (click)="onSumbmitID()">Buscar por ID</button>
+    </form>
+  </section>
+
+  <section class="inline-section">
+    <form action method>
+      
+      <button (click)="getData()">Listar</button>
+    </form>
+
+  </section>
+
+
+
+  <div *ngIf="isConfirmationDialogOpen" class="floating-dialog">
+
+    <div class="modal" >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Confirmar Eliminación</h5>
+            <button type="button" class="close"
+              (click)="closeConfirmationDialog()">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            ¿Estás seguro de que deseas eliminar este registro?
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary"
+              (click)="closeConfirmationDialog()">Cancelar</button>
+            <button type="button" class="btn btn-danger"
+              (click)="confirmDeletion()">Eliminar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<div>
+  <table class="rwd-table">
+    <thead>
+      <tr>
+        <th>visit_id </th>
+        <th>visit_id_g </th>
+        <th>visit_id_r</th>
+
+        <th>visit_id_e </th>
+        <th>visit_duration </th>
+        <th>visit_date</th>
+
+     
+        
+     
+        <th>Actualizar</th>
+        <th>Eliminar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let record of filteredRecords; let i=index ">
+       
+        <td> {{ record.visit_id}} </td>
+        <td> {{ record.visit_id_g }} </td>
+        <td> {{ record.visit_id_r }} </td>
+        <td> {{ record.visit_id_e }} </td>
+        <td> {{ record.visit_duration}} </td>
+        <td> {{ record.visit_date }} </td>
+
+
+
+        <td> <button (click)="navegarAPagina2( record.visit_id.toString())">Actualizar</button>
+        </td>
+        <td> <button class="btn btn-danger" (click)="openConfirmationDialog( record.visit_id.toString())">eliminar</button>
+        </td>
+
+      </tr>
+    </tbody>
+  </table>
+  <div *ngIf="estado==true" class="pagination">
+    <button [disabled]="currentPage === 1" (click)="prevPage()">Previous</button>
+    <span>Page {{ currentPage }} of {{ lastPage }}</span>
+    <button [disabled]="currentPage === lastPage" (click)="nextPage()">Next</button>
+  </div>
+
+</div>
+
+

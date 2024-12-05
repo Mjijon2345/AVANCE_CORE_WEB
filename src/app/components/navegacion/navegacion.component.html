@@ -1,0 +1,14 @@
+
+<nav *ngIf="authService.isLoggedIn()" class="nav-primary" role="navigation">
+  <ul role="menubar"> 
+    <li role="presentation"[routerLinkActive]="['seleccionado']"><a [routerLink]="['/inicio']" role="menuitem">Inicio</a></li>
+    <li role="presentation"[routerLinkActive]="['seleccionado']"><a [routerLink]="['/huesped']" role="menuitem">Huesped</a></li>
+    <li role="presentation"[routerLinkActive]="['seleccionado']"><a [routerLink]="['/familiar']" role="menuitem">Familiar</a></li>
+    <li role="presentation"[routerLinkActive]="['seleccionado']"><a [routerLink]="['/enfermedad']" role="menuitem">Enfermedad</a></li>
+    <li role="presentation"[routerLinkActive]="['seleccionado']"><a [routerLink]="['/visita']" role="menuitem">Visita</a></li>
+    <li role="presentation"[routerLinkActive]="['seleccionado']"><a [routerLink]="['/actividades']" role="menuitem">Actividades</a></li>
+    
+    <li role="presentation"[routerLinkActive]="['seleccionado']"><a [routerLink]="['/empleado']" role="menuitem">Empleado</a></li>
+    <li *ngIf="authService.isLoggedIn()"><a (click)="authService.logout()">Cerrar sesión</a></li>
+  </ul>
+</nav>

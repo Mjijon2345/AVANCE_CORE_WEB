@@ -1,0 +1,68 @@
+<h1>Ingresar nueva visita:</h1>
+<form (ngSubmit)="onSumbmit()" #viuForm="ngForm">  
+    
+    
+    
+    <label for="visit_id_g">visit_id_g:</label><br>
+    <input type="number" id="visit_id_g" name="visit_id_g"
+        placeholder="visit_id_g"
+        #nombre="ngModel" [(ngModel)]="solicitud.visit_id_g"
+        required><br> <br>
+    <br>
+
+    <label for="visit_id_r">visit_id_r:</label><br>
+    <input type="number" id="visit_id_r" name="visit_id_r"
+        placeholder="visit_id_r"
+        #nombre="ngModel" [(ngModel)]="solicitud.visit_id_r"
+        required><br> <br>
+    <br>
+
+    <label for="visit_id_e">visit_id_e:</label><br>
+    <input type="number" id="visit_id_e" name="visit_id_e"
+        placeholder="visit_id_e"
+        #nombre="ngModel" [(ngModel)]="solicitud.visit_id_e"
+        required><br> <br>
+    <br>
+
+    <label for="visit_duration">visit_duration:</label><br>
+    <input type="text" id="visit_duration" name="visit_duration"
+        placeholder="visit_duration"
+        #nombre="ngModel" [(ngModel)]="solicitud.visit_duration"
+        required><br> <br>
+    <br>
+
+    <label for="visit_date">visit_date:</label><br>
+    <input type="text" id="visit_date" name="visit_date"
+        placeholder="visit_date"
+        #nombre="ngModel" [(ngModel)]="solicitud.visit_date"
+        required><br> <br>
+    <br>
+
+    <label for="visit_hour">visit_hour:</label><br>
+    <input type="text" id="visit_hour" name="visit_hour"
+        placeholder="visit_hour"
+        #nombre="ngModel" [(ngModel)]="solicitud.visit_hour"
+        required><br> <br>
+    <br>
+
+   
+
+
+    <label>
+        <input type="radio"
+            [checked]="estado"
+            (click)="seleccionarOpcion()"> Activa
+    </label>
+
+    <br>
+    
+
+    <input type="submit" value="Envía"
+        >
+        <button (click)="navegarAPagina()">Cancelar</button>
+
+</form>
+
+
+
+
