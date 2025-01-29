@@ -27,13 +27,7 @@ Exportación de Informes: jsPDF, xlsx
 
 Control de Versiones: GitHub
 
-
 📥 Instalación y Configuración
-
-🔹 1. Clonar el Repositorio
-
-git clone https://github.com/tu-usuario/proyecto-huespedes.git
-cd proyecto-huespedes
 
 🔹 2. Configurar el Backend (Angular)
 
@@ -67,11 +61,3 @@ Se genera un informe general, donde se puede filtrar por enfermedad
 ✅ DIP (Principio de Inversión de Dependencias): Uso de interfaces en la API.
 ✅Patrón Factory: Creación de objetos pacientes y actividades.
 ✅ Patrón Observer: Notificaciones de nuevos registros.
-
-🛠 Contribuciones
-
-Si deseas contribuir, por favor haz un fork y envía un Pull Request. Para preguntas, abre un Issue.
-
-🏆 Autores
-
-👤 [Tu Nombre]📧 Email: [tuemail@ejemplo.com]🔗 LinkedIn: linkedin.com/in/tuperfil
