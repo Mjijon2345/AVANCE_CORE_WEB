@@ -1,27 +1,77 @@
-# ActividadFront
+📊 Sistema de Gestión de Huéspedes y Actividades en Asilos
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
+🚀 Descripción del Proyecto
 
-## Development server
+Este sistema permite gestionar huéspedes, trabajadores y visitas en un asilo, asociando enfermedades con actividades recomendadas. Se implementó con React (frontend) y Angular (backend), permitiendo la generación de informes y visualización de estadísticas en tiempo real.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+📌 Características Principales
 
-## Code scaffolding
+✅ Registro de huéspedes con cédula, nombre, apellido y enfermedad.
+✅ Asociación de actividades recomendadas según la enfermedad.
+✅ Generación de informes en PDF y Excel.
+✅ Visualización de datos con gráficos interactivos.
+✅Filtros por enfermedad para análisis de tendencias.
+✅ Implementación de principios SOLID y patrones de diseño para un código limpio y escalable.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+🛠️ Tecnologías Utilizadas
 
-## Build
+Frontend: React, Recharts 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Backend: Angular, Node.js
 
-## Running unit tests
+Base de Datos: SQL
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Estilos: CSS 
 
-## Running end-to-end tests
+Exportación de Informes: jsPDF, xlsx
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Control de Versiones: GitHub
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+📥 Instalación y Configuración
+
+🔹 1. Clonar el Repositorio
+
+git clone https://github.com/tu-usuario/proyecto-huespedes.git
+cd proyecto-huespedes
+
+🔹 2. Configurar el Backend (Angular)
+
+cd backend
+npm install
+ng serve
+
+🔹 3. Configurar el Frontend (React)
+
+cd ../frontend
+npm install
+npm start
+
+🧪 Pruebas Funcionales
+
+✅ Prueba 1: Registro de Huéspedes
+
+Ingresar datos del huésped.
+
+Seleccionar enfermedad y actividades recomendadas.
+
+Guardar y verificar en la lista.
+
+✅ Prueba 2: Generacion de Informe 
+
+Se genera un informe general, donde se puede filtrar por enfermedad
+
+📌 Mejoras con SOLID y Patrones de Diseño
+
+✅ SRP (Principio de Responsabilidad Única): Separación de la lógica de datos y UI.
+✅ DIP (Principio de Inversión de Dependencias): Uso de interfaces en la API.
+✅Patrón Factory: Creación de objetos pacientes y actividades.
+✅ Patrón Observer: Notificaciones de nuevos registros.
+
+🛠 Contribuciones
+
+Si deseas contribuir, por favor haz un fork y envía un Pull Request. Para preguntas, abre un Issue.
+
+🏆 Autores
+
+👤 [Tu Nombre]📧 Email: [tuemail@ejemplo.com]🔗 LinkedIn: linkedin.com/in/tuperfil
