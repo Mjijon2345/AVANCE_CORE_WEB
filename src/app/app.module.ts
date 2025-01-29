@@ -30,6 +30,7 @@ import { CrearEnfermedadComponent } from './components/crear-enfermedad/crear-en
 import { CrearVisitaComponent } from './components/crear-visita/crear-visita.component';
 import { CrearActividadesComponent } from './components/crear-actividades/crear-actividades.component';
 import { ActividadesComponent } from './components/actividades/actividades.component';
+import { ListarComponent } from './components/listar/listar.component'; 
 
 @NgModule({
   declarations: [
@@ -59,6 +60,7 @@ import { ActividadesComponent } from './components/actividades/actividades.compo
     CrearVisitaComponent,
     CrearActividadesComponent,
     ActividadesComponent,
+    ListarComponent,
 
   ],
 

@@ -16,6 +16,7 @@ import { FamiliarComponent } from "./components/familiar/familiar.component";
 import { EnfermedadComponent } from "./components/enfermedad/enfermedad.component";
 import { VisitaComponent } from "./components/visita/visita.component"; 
 import { ActividadesComponent } from "./components/actividades/actividades.component"; 
+import { ListarComponent } from "./components/listar/listar.component"; 
 
 
 
@@ -54,6 +55,7 @@ import { LoginComponent } from "./components/login/login.component";
    { path: 'creaVisita', component: CrearVisitaComponent },
    { path: 'creaActividades/:numero?', component: CrearActividadesComponent },
    { path: 'creaActividades', component: CrearActividadesComponent },
+   { path: 'listar', component: ListarComponent },
    
 
 

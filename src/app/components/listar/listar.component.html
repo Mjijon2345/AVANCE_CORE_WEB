@@ -1,0 +1,46 @@
+<div class="actividades">
+    <h2>Actividades Más Frecuentes</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre de la Actividad</th>
+          <th>Frecuencia</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let actividad of actividadesFrecuentes">
+          <td>{{ actividad.nombre }}</td>
+          <td>{{ actividad.frecuencia }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <div class="filtro-fecha">
+    <h2>Filtrar Actividades por Fecha</h2>
+  
+    <label for="startDate">Fecha de inicio:</label>
+    <input type="date" id="startDate" [(ngModel)]="startDate">
+  
+    <label for="endDate">Fecha de fin:</label>
+    <input type="date" id="endDate" [(ngModel)]="endDate">
+  
+    <button (click)="filtrarActividadesPorFecha()">Filtrar</button>
+  
+    <h3>Actividades Filtradas por Fecha</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre de la Actividad</th>
+          <th>Frecuencia</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let actividad of actividadesFiltradasPorFecha">
+          <td>{{ actividad.nombre }}</td>
+          <td>{{ actividad.frecuencia }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

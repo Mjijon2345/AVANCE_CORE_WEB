@@ -3,12 +3,16 @@ import { Router } from '@angular/router';
 import { Huesped } from 'src/app/models/Huesped';
 
 import { relacionHuespedEnfermedadesReal } from '../crear-huesped/crear-huesped.component'; 
+
+
 import { relacionHuespedActividadesReal } from '../crear-huesped/crear-huesped.component';  
 import { HuespedExtra } from 'src/app/models/HuespedExtra';
 
 
 
 export var recordsg: Array<Huesped> = [];
+export var filteredRecordsx: Array<HuespedExtra> = [];
+
 
 
 

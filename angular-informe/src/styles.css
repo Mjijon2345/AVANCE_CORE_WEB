@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  .contenedor {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .lista {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .tarjeta {
+    background: #e3f2fd;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .filtro {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .filtro label {
+    font-size: 16px;
+    margin-right: 10px;
+  }
+  
+  .filtro select {
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 5px;
+  }
+  
